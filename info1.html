@@ -1,8 +1,39 @@
-<HTML>
-<HEAD>
-<TITLE>Hello World in HTML</TITLE>
-</HEAD>
-<BODY>
-<CENTER><H1>Hello World!</H1></CENTER>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Login</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please Enter Your Password',' ');
+while (testV < 3) {
+if (!pass1) 
+history.go(-1);
+if (pass1.toLowerCase() == "anchovetita") {
+alert('You Got it Right!');
+window.open('info2.html');
+break;
+} 
+testV+=1;
+var pass1 = 
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3) 
+history.go(-1);
+return " ";
+} 
+</script>
+<center>
+<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+<h1 align="center">
+<img src="Projects/img/rio.png" width="200" height="80" alt="Adivina la contraseña" title="Adivina el password"> 
+</h1>
+<input type="button" value="Advertencia Area protegida" onClick="passWord()">
+</form>
+</center>
+</body>
+</html>
