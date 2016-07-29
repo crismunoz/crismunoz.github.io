@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Pagina en construccion</title>
+	<link rel="stylesheet" href="estilos.css" />
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="countdown.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#countdown").countdown({
+				date: "17 september 2016 15:00:00",
+				format: "on"
+			},
+			function() {
+				// callback function
+			});
+		});
+	</script>
+</head>
+<body>
+<h1 align="center">Anchovetita llega a Rio en ...</h1>
+	<div class="timer-area">	
+		<ul id="countdown">
+			<li>
+				<span class="days">00</span>
+				<p class="timeRefDays">days</p>
+			</li>
+			<li>
+				<span class="hours">00</span>
+				<p class="timeRefHours">hours</p>
+			</li>
+			<li>
+				<span class="minutes">00</span>
+				<p class="timeRefMinutes">minutes</p>
+			</li>
+			<li>
+				<span class="seconds">00</span>
+				<p class="timeRefSeconds">seconds</p>
+			</li>
+		</ul>
+		
+	</div> 
+</body>
+</html>
