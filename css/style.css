@@ -45,9 +45,9 @@ html, body {
 }
 
 body {
-  background: rgb(150, 150, 173);
+  background: rgb(0, 10, 30);
   font-family: 'Montserrat', sans-serif;
-  color: rgb(150, 150, 173);
+  color: rgb(0, 10, 30);
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
 }
