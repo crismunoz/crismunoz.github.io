@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded container -->
+  <rect x="1.5" y="1.5" width="37" height="37" rx="10" stroke="#2d5be3" stroke-width="2"/>
+  <!-- C - left arc -->
+  <path d="M16 12h-2a4 4 0 00-4 4v8a4 4 0 004 4h2" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- M - center peaks -->
+  <path d="M17 28V12l4 8 4-8v16" stroke="#2d5be3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- V - right chevron -->
+  <path d="M27 12l3.5 16L34 12" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

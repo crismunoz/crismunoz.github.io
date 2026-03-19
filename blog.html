@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog - Cristian Munoz Villalobos. Thoughts on AI Ethics, LLMs, Trustworthy AI, and Machine Learning.">
+  <title>Blog - Cristian Munoz Villalobos</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="site/style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner container">
+      <a href="/" class="nav-brand"><img src="site/logo.svg" alt="CMV" class="nav-logo"></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="blog.html" style="color: var(--accent-light);">Blog</a></li>
+        <li><a href="cv.pdf" class="btn-nav" target="_blank">Download CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Thoughts on AI ethics, large language models, trustworthy AI, and the intersection of technology and society.</p>
+    </div>
+  </div>
+
+  <!-- Blog Posts -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid" id="blog-grid">
+        <!-- Blog posts will be added here -->
+      </div>
+      <p class="blog-empty" id="blog-empty">No posts yet. Check back soon.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <span class="nav-brand"><img src="site/logo.svg" alt="CMV" class="nav-logo"></span>
+          <p>ML Engineer &middot; AI Researcher &middot; Educator</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="/">Home</a>
+          <a href="research.html">Research</a>
+          <a href="blog.html">Blog</a>
+          <a href="cv.pdf" target="_blank">CV</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <a href="https://linkedin.com/in/crismunozv" target="_blank">LinkedIn</a>
+          <a href="https://github.com/crismunoz" target="_blank">GitHub</a>
+          <a href="mailto:crisstrink@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Cristian Munoz Villalobos. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site/main.js"></script>
+  <script>
+    fetch('blog/posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        if (!posts.length) return;
+        document.getElementById('blog-empty').style.display = 'none';
+        const grid = document.getElementById('blog-grid');
+        posts
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .forEach(post => {
+            const date = new Date(post.date).toLocaleDateString('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric'
+            });
+            const tags = (post.tags || [])
+              .map(t => `<span class="tag">${t}</span>`)
+              .join('');
+            const card = document.createElement('a');
+            card.href = `blog/${post.slug}.html`;
+            card.className = 'blog-card';
+            card.innerHTML = `
+              <div class="blog-card-img"></div>
+              <div class="blog-card-body">
+                <div class="blog-card-date">${date}</div>
+                <h3>${post.title}</h3>
+                <p>${post.description}</p>
+                <div class="blog-card-tags">${tags}</div>
+              </div>`;
+            grid.appendChild(card);
+          });
+        // Re-observe new cards for scroll animation
+        document.querySelectorAll('.blog-card').forEach(el => {
+          el.classList.add('fade-in');
+          if (window.observer) window.observer.observe(el);
+        });
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

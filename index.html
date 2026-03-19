@@ -1,32 +1,278 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>Cristian Muñoz Villalobos</title>
-  <link rel="shortcut icon" type="image/png" href="assets/man.png">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
+  <meta name="description" content="Cristian Munoz Villalobos — ML Engineer, AI Researcher, and Educator. Building trustworthy, fair, and explainable AI systems.">
+  <title>Cristian Munoz Villalobos</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="site/style.css?v=5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div id="particles">
-  <div id="intro">
-      <h2 style="font-family: 'Syncopate', sans-serif; color:rgba(255, 255, 255, 0.931); font-weight: 10;">Cristian Enrique Muñoz Villalobos&nbsp<a href="cv.pdf" style="color: rgb(255, 255, 255);"><i class="fas fa-arrow-alt-circle-down" style="font-size: 0.8em;"></i></a></h2>
-        <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-    <a href="https://www.linkedin.com/in/crismunozv/" style="color: rgba(255, 255, 255, 0.9);"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://www.facebook.com/crisstrink" style="color: rgba(255, 255, 255, 0.9);"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://github.com/crismunoz" style="color: rgba(255, 255, 255, 0.9);"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-  </div>
-</div>
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner container">
+      <a href="/" class="nav-brand"><img src="site/logo.svg" alt="CMV" class="nav-logo"></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/" style="color: var(--accent-light);">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="cv.pdf" class="btn-nav" target="_blank">CV</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Intro -->
+  <header class="intro">
+    <div class="container intro-grid">
+      <div class="intro-left">
+        <h1>Cristian Munoz Villalobos</h1>
+        <p class="intro-role">ML Engineer<br>AI Researcher<br>Educator</p>
+        <div class="intro-links">
+          <a href="mailto:crisstrink@gmail.com">crisstrink@gmail.com</a>
+          <a href="https://github.com/crismunoz" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/crismunozv" target="_blank">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a>
+        </div>
+      </div>
+      <div class="intro-right">
+        <p class="intro-bio">I build tools and frameworks that make AI systems more trustworthy, fair, and explainable. My work spans LLM evaluation and benchmarking, bias mitigation, model explainability, and responsible AI &mdash; from designing metrics and open-source libraries to scaling transformer models across 100+ GPUs.</p>
+        <p class="intro-bio">Over 12+ years I've moved between research, engineering, teaching, and consulting &mdash; leading R&amp;D teams, publishing 15+ papers at venues like NeurIPS, teaching NLP and deep learning at universities in Brazil and Peru, and advising organizations including the International Labour Organization. Ph.D. in Electrical Engineering. Trilingual: Spanish, English, Portuguese.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Research Interests -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="interests">
+        <span>AI Ethics &amp; Trustworthiness</span>
+        <span>Large Language Models</span>
+        <span>Explainability &amp; Interpretability</span>
+        <span>Bias Mitigation</span>
+        <span>Natural Language Processing</span>
+        <span>Deep Learning at Scale</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Publications -->
+  <section class="section section-alt" id="publications">
+    <div class="container">
+      <h2 class="section-title">Selected Publications</h2>
+      <div class="pub-list">
+
+        <article class="pub-item">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <h3>LibVulnWatch: A Deep Assessment Agent System and Leaderboard for Uncovering Hidden Vulnerabilities in Open-Source AI Libraries</h3>
+            <p class="pub-authors">Z. Wu, S. Cho, U. Mohammed, <strong>C. Munoz</strong>, K. Costa, X. Guan, T. King, Z. Wang, E. Kazim, A. Koshiyama</p>
+            <p class="pub-venue">ACL 2025 Student Research Workshop &middot; ICML 2025 TAIG Workshop</p>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <h3>From Text to Emoji: How PEFT-Driven Personality Manipulation Unleashes the Emoji Potential in LLMs</h3>
+            <p class="pub-authors">N. Jain, Z. Wu, <strong>C. E. M. Villalobos</strong>, A. Hilliard, X. Guan, A. Koshiyama, E. Kazim, P. Treleaven</p>
+            <p class="pub-venue">Findings of NAACL 2025 &middot; NeurIPS 2024 Workshop on Behavioral ML</p>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <h3>THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in LLMs</h3>
+            <p class="pub-authors">M. Liang, A. Arun, Z. Wu, <strong>C. E. M. Villalobos</strong>, J. Lutch, E. Kazim, A. Koshiyama, P. Treleaven</p>
+            <p class="pub-venue">Workshop on Socially Responsible Language Modelling Research</p>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <h3>Eliciting Big Five Personality Traits in LLMs: A Textual Analysis with Classifier-Driven Approach</h3>
+            <p class="pub-authors">A. Hilliard, <strong>C. E. M. Villalobos</strong>, Z. Wu, A. S. Koshiyama</p>
+            <p class="pub-venue">arXiv:2402.08341</p>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <h3>Evaluating Explainability for ML Predictions Using Model-Agnostic Metrics</h3>
+            <p class="pub-authors"><strong>C. E. M. Villalobos</strong>, K. da Costa, B. Modenesi, A. S. Koshiyama</p>
+            <p class="pub-venue">arXiv:2302.12094</p>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-year">2023</span>
+          <div class="pub-body">
+            <h3>Uncovering Bias in Face Generation Models</h3>
+            <p class="pub-authors"><strong>C. E. M. Villalobos</strong>, S. Zannone, U. Mohammed, A. S. Koshiyama</p>
+            <p class="pub-venue">arXiv:2302.11562</p>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <span class="pub-year">2023</span>
+          <div class="pub-body">
+            <h3>Sentimental Analysis on Social Media with Recurring Models and Pretrained Embeddings in Brazilian Portuguese</h3>
+            <p class="pub-authors"><strong>C. E. M. Villalobos</strong>, L. Forero, H. De Mello, C. Valencia, A. Orjuela</p>
+            <p class="pub-venue">DOI: 10.1145/3582768</p>
+          </div>
+        </article>
+
+      </div>
+      <p class="section-more"><a href="research.html">All publications &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="cv-list">
+
+        <div class="cv-item">
+          <div class="cv-date">2022&ndash;Present</div>
+          <div class="cv-detail">
+            <strong>Senior Research &mdash; ML Engineer</strong>
+            <span class="cv-org">Holistic AI · London, UK</span>
+            <p>LLM benchmarks across efficacy, robustness, and privacy. AI risk mitigation tools. Trustworthiness toolkit for bias, fairness, and explainability.</p>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-date">2022&ndash;Present</div>
+          <div class="cv-detail">
+            <strong>Data Science Advisor</strong>
+            <span class="cv-org">ICA Laboratory · Rio de Janeiro, Brazil</span>
+            <p>Semantic search systems based on knowledge graphs. Data provisioning architecture with REST APIs and gRPC.</p>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-date">2018&ndash;2022</div>
+          <div class="cv-detail">
+            <strong>Senior Data Scientist</strong>
+            <span class="cv-org">ICA Laboratory · Rio de Janeiro, Brazil</span>
+            <p>Led a 20-person R&D team. Scaled transformer-based models to millions of simulations across 100+ GPUs.</p>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-date">2016&ndash;2022</div>
+          <div class="cv-detail">
+            <strong>Assistant Professor</strong>
+            <span class="cv-org">PUC-Rio &amp; PUCP · Brazil &amp; Peru</span>
+            <p>Taught NLP, Data Science, Decision Support Systems, and Deep Learning with Python.</p>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-date">2012&ndash;2018</div>
+          <div class="cv-detail">
+            <strong>Researcher</strong>
+            <span class="cv-org">ICA Laboratory · Rio de Janeiro, Brazil</span>
+            <p>Neural networks for classification and optimization. HPC cluster management with PBS Torque and SLURM.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Recognition -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="cv-list">
+
+        <div class="cv-item">
+          <div class="cv-date">2015&ndash;2019</div>
+          <div class="cv-detail">
+            <strong>Ph.D. Electrical Engineering</strong>
+            <span class="cv-org">PUC-Rio · Rio de Janeiro, Brazil</span>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-date">2012&ndash;2014</div>
+          <div class="cv-detail">
+            <strong>M.Sc. Electrical Engineering</strong>
+            <span class="cv-org">PUC-Rio · Rio de Janeiro, Brazil</span>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-date">2005&ndash;2010</div>
+          <div class="cv-detail">
+            <strong>B.Sc. Mechatronics Engineering</strong>
+            <span class="cv-org">UNI · Lima, Peru</span>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="section-title" style="margin-top: 64px;">Recognition</h2>
+      <div class="cv-list">
+        <div class="cv-item">
+          <div class="cv-date">2021</div>
+          <div class="cv-detail">
+            <strong>Patent: Method for Extracting and Structuring Information</strong>
+            <span class="cv-org">BR 10 2021 023977-8</span>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-date">Open Source</div>
+          <div class="cv-detail">
+            <strong>Holistic AI Toolkit</strong>
+            <span class="cv-org">Bias, fairness, and explainability assessment library &mdash; <a href="https://github.com/holistic-ai" target="_blank">github.com/holistic-ai</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <span class="nav-brand"><img src="site/logo.svg" alt="CMV" class="nav-logo"></span>
+          <p>ML Engineer · AI Researcher · Educator</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="/">Home</a>
+          <a href="research.html">Research</a>
+          <a href="blog.html">Blog</a>
+          <a href="cv.pdf" target="_blank">CV</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <a href="https://linkedin.com/in/crismunozv" target="_blank">LinkedIn</a>
+          <a href="https://github.com/crismunoz" target="_blank">GitHub</a>
+          <a href="mailto:crisstrink@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Cristian Munoz Villalobos. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site/main.js"></script>
 </body>
 </html>
